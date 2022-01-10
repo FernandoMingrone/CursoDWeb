@@ -4,20 +4,52 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0 10em;
+.div_contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 5fr 5fr 1fr;
+  grid-template-areas:
+    "header   header   header   header"
+    "projects projects projects projects"
+    "tec      tec      tec      tec"
+    "footer   footer   footer   footer";
+}
+
+.header_contenedor {
+  grid-area: header;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas:
+    "nav  nav  nav  nav"
+    "hero hero hero hero";
+  align-items: center;
+  padding-left: 5em;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.tecnologies {
+  grid-area: tec;
+}
+
+.footer_conteiner {
+  grid-area: footer;
 }
 
 .navbar {
-  height: 7em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
+  grid-area: nav;
 
-.navbar h3 {
-  padding-left: 1em;
+  .portfolio {
+    display: flex;
+  }
+  h3 {
+    padding: 0 1em;
+    font-size: 1em;
+  }
 }
 
 ul {
@@ -36,29 +68,36 @@ li a {
   color: #000000;
 }
 
+.socialIcons {
+  text-decoration: none;
+}
+
+.icons {
+  font-size: 2em;
+  color: #000000;
+  margin: 1em;
+  background-color: #fff;
+}
+
 .hero {
   width: 100%;
-  height: 50em;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  padding: 1em;
-}
+  grid-area: hero;
 
-.hero h1 {
-  font-size: 6em;
-}
+  h1 {
+    font-size: 5em;
+  }
 
-.hero p {
-  font-size: 1.5em;
-  padding: 2em 0;
+  p {
+    font-size: 1.5em;
+    padding: 1.5em 0;
+  }
 }
 
 .button_cv {
   border: none;
   border-radius: 25px;
   padding: 10px;
+  margin: 1em 0;
   font-size: 1em;
   background: linear-gradient(270deg, #13c782 0%, #1334c7 100%);
 }
@@ -92,34 +131,125 @@ li a {
   font-size: 12em;
 }
 
-@media screen and (max-width: 576px) {
-  body {
-    margin: 0;
-  }
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
 
-  .navbar {
-    width: 50%;
-  }
+// .navbar {
+//   height: 7em;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   width: 100%;
+// }
 
-  .hero {
-    height: 63em;
-    width: 40em;
-    padding-left: 4em;
+// .navbar h3 {
+//   padding-left: 1em;
+// }
 
-    h1 {
-      font-size: 5em;
-      width: 100%;
-    }
+// ul {
+//   list-style: none;
+//   display: flex;
+// }
 
-    p {
-      font-size: 2.5em;
-      width: 100%;
-    }
-  }
+// li {
+//   margin: 0 3em;
+// }
 
-  .button_cv {
-    width: 12em;
-    height: 3em;
-    font-size: 20px;
-  }
-}
+// li a {
+//   text-decoration: none;
+//   font-size: 1.5em;
+//   font-weight: bold;
+//   color: #000000;
+// }
+
+// .hero {
+//   width: 100%;
+//   height: 50em;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: start;
+//   justify-content: center;
+//   padding: 1em;
+// }
+
+// .hero h1 {
+//   font-size: 6em;
+// }
+
+// .hero p {
+//   font-size: 1.5em;
+//   padding: 2em 0;
+// }
+
+// .button_cv {
+//   border: none;
+//   border-radius: 25px;
+//   padding: 10px;
+//   font-size: 1em;
+//   background: linear-gradient(270deg, #13c782 0%, #1334c7 100%);
+// }
+
+// .projects h1 {
+//   font-size: 4em;
+//   padding: 2em 0;
+// }
+
+// .project_container {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 1fr 1fr;
+//   grid-gap: 4em;
+//   margin-bottom: 10em;
+// }
+
+// .project {
+//   width: 10em;
+//   height: 10em;
+//   justify-content: center;
+//   align-content: center;
+// }
+
+// .technologies h1 {
+//   font-size: 4em;
+//   padding: 2em 0;
+// }
+
+// .about {
+//   font-size: 12em;
+// }
+
+// @media screen and (max-width: 576px) {
+//   body {
+//     margin: 0;
+//   }
+
+//   .navbar {
+//     width: 50%;
+//     font-size: 2rem;
+//   }
+
+//   .hero {
+//     height: 63em;
+//     width: 40em;
+//     padding-left: 4em;
+
+//     h1 {
+//       font-size: 5em;
+//       width: 100%;
+//     }
+
+//     p {
+//       font-size: 2.5em;
+//       width: 100%;
+//     }
+//   }
+
+//   .button_cv {
+//     width: 12em;
+//     height: 3em;
+//     font-size: 21px;
+//   }
+// }
