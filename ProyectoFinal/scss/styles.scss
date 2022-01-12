@@ -9,7 +9,7 @@
 .div_contenedor {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh 1fr 100vh 50vh;
+  grid-template-rows: 100vh 1fr 100vh 25vh;
   grid-template-areas:
     "header   header   header   header"
     "projects projects projects projects"
@@ -70,7 +70,7 @@ ul {
 }
 
 .icons {
-  font-size: 2em;
+  font-size: 3em;
   color: #000000;
   margin: 1em;
   background-color: #fff;
@@ -200,7 +200,54 @@ ul {
 
 .footer_conteiner {
   grid-area: footer;
-  background-color: #0000002d;
+  background-color: #d2d2d2;
+  display: grid;
+  height: 20em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-areas:
+    "tel email . ."
+    "text .    . socialIcons";
+  justify-items: center;
+  align-items: center;
+  padding: 0 15em;
+}
+.call {
+  grid-area: tel;
+  color: #5e5c5c;
+
+  a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #3a3a3a;
+    padding: 1em;
+  }
+}
+
+.email {
+  grid-area: email;
+  color: #5e5c5c;
+
+  a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #3a3a3a;
+    padding: 1em;
+  }
+}
+
+.footer_text {
+  grid-area: text;
+  color: #3a3a3a;
+}
+
+.footerSocial_media {
+  grid-area: socialIcons;
+
+  i {
+    background-color: #d2d2d2;
+    font-size: 3em;
+  }
 }
 
 .about {
