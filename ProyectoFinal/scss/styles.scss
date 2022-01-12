@@ -4,16 +4,20 @@
   box-sizing: border-box;
 }
 
+///////////////////////////// GRID LAYOUT
+
 .div_contenedor {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 5fr 5fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh 1fr 100vh 50vh;
   grid-template-areas:
     "header   header   header   header"
     "projects projects projects projects"
     "tec      tec      tec      tec"
     "footer   footer   footer   footer";
 }
+
+///////////////////////////// HEADER
 
 .header_contenedor {
   grid-area: header;
@@ -25,47 +29,40 @@
     "nav  nav  nav  nav"
     "hero hero hero hero";
   align-items: center;
-  padding-left: 5em;
-}
-
-.projects {
-  grid-area: projects;
-}
-
-.tecnologies {
-  grid-area: tec;
-}
-
-.footer_conteiner {
-  grid-area: footer;
+  padding: 0 15em;
 }
 
 .navbar {
   grid-area: nav;
+}
 
-  .portfolio {
-    display: flex;
-  }
-  h3 {
-    padding: 0 1em;
-    font-size: 1em;
-  }
+.portfolio {
+  padding: 0 1em;
+  font-size: 1em;
+  text-decoration: none;
+  color: #000000;
 }
 
 ul {
   list-style: none;
   display: flex;
+
+  li {
+    margin: 0 3em;
+
+    a {
+      text-decoration: none;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #000000;
+    }
+  }
 }
 
-li {
-  margin: 0 3em;
-}
+/////////////////////////////SOCIAL ICONS
 
-li a {
-  text-decoration: none;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #000000;
+.social_media {
+  padding-right: 3em;
 }
 
 .socialIcons {
@@ -78,6 +75,8 @@ li a {
   margin: 1em;
   background-color: #fff;
 }
+
+/////////////////////////////HERO
 
 .hero {
   width: 100%;
@@ -102,33 +101,139 @@ li a {
   background: linear-gradient(270deg, #13c782 0%, #1334c7 100%);
 }
 
-.projects h1 {
-  font-size: 4em;
-  padding: 2em 0;
-}
+/////////////////////////////PROJECTS
 
+.projects {
+  grid-area: projects;
+  padding-left: 5em;
+  background-color: #0000002d;
+  justify-content: center;
+  padding: 0 15em;
+
+  h1 {
+    font-size: 4em;
+    padding: 2em 0;
+  }
+}
 .project_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 4em;
-  margin-bottom: 10em;
+  justify-items: center;
 }
 
 .project {
-  width: 10em;
-  height: 10em;
-  justify-content: center;
-  align-content: center;
+  width: 28em;
+  height: 40em;
+  border: 5px solid #0000002d;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 8em;
+  background-color: rgba(255, 255, 255, 0.836);
+  -webkit-box-shadow: 2px 3px 9px 3px rgba(0, 0, 0, 0.78);
+  box-shadow: 2px 3px 9px 3px rgba(0, 0, 0, 0.78);
+
+  img {
+    width: 90%;
+    align-content: center;
+    -webkit-box-shadow: 2px 3px 9px 3px rgba(0, 0, 0, 0.78);
+    box-shadow: 2px 3px 9px 3px rgba(0, 0, 0, 0.78);
+  }
+
+  p {
+    padding: 2em;
+  }
+
+  div {
+    h3 {
+      text-align: center;
+    }
+    .project_stack {
+      display: flex;
+
+      h5 {
+        padding: 0.5em;
+      }
+    }
+  }
 }
 
-.technologies h1 {
-  font-size: 4em;
-  padding: 2em 0;
+.img {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+///////////////////////////TECNOLOGIES
+
+.technologies {
+  grid-area: tec;
+  padding: 0 15em;
+  height: 100vh;
+
+  h1 {
+    font-size: 4em;
+    padding: 2em 0;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    padding: 1em 0;
+  }
+}
+
+.tec_icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7em;
+  height: 3em;
+
+  i {
+    margin: 0.5em;
+  }
+}
+
+///////////////////////////////////FOOTER
+
+.footer_conteiner {
+  grid-area: footer;
+  background-color: #0000002d;
 }
 
 .about {
   font-size: 12em;
+}
+
+@media screen and (max-width: 1294px) {
+  .navbar h3 {
+    padding: 0 1em;
+    font-size: 1em;
+  }
+
+  ul li {
+    font-size: 0.7em;
+  }
+
+  .icons {
+    font-size: 1.7em;
+    color: #000000;
+    margin: 0.7em;
+    background-color: #fff;
+  }
+
+  .hero {
+    h1 {
+      font-size: 3.8em;
+    }
+
+    p {
+      font-size: 1.1em;
+      padding: 0 0;
+    }
+  }
 }
 
 // * {
