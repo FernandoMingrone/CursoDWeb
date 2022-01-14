@@ -1,0 +1,166 @@
+///////////////////////////// HEADER
+
+.header_contenedor {
+  @include contenedores($bgPrimario);
+  grid-area: header;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas:
+    "nav  nav  nav  nav"
+    "hero hero hero hero";
+  align-items: center;
+}
+
+/////////////////////////NAVBAR
+.navbar {
+  grid-area: nav;
+}
+
+.portfolio {
+  padding: 0 1em;
+  font-size: 1em;
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+
+  li {
+    margin: 0 3em;
+
+    a {
+      text-decoration: none;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #000000;
+    }
+  }
+}
+
+/////////////////////////////SOCIAL ICONS
+
+.social_media {
+  padding-right: 3em;
+}
+
+.socialIcons {
+  text-decoration: none;
+}
+
+.icons {
+  font-size: 3em;
+  color: #000000;
+  margin: 1em;
+  background-color: #fff;
+}
+
+/////////////////////////////HERO
+
+.hero {
+  width: 100%;
+  grid-area: hero;
+
+  h1 {
+    font-size: 5em;
+  }
+
+  p {
+    font-size: 1.5em;
+    padding: 1.5em 0;
+  }
+}
+
+.button_cv {
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 1em 0;
+  font-size: 1em;
+  background: linear-gradient(270deg, $btnColor1 0%, $btnColor2 100%);
+}
+
+@media screen and (max-width: 480px) {
+  .header_contenedor {
+    grid-area: header;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+      "nav  nav "
+      "hero hero";
+    padding: 0;
+  }
+  ///////////////////////////////NAVBAR
+
+  .portfolio {
+    padding: 0 0.2em;
+    font-size: 1em;
+    text-decoration: none;
+    color: #000000;
+    grid-area: port;
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "port social"
+      "list list  ";
+
+    ul {
+      grid-area: list;
+    }
+
+    li {
+      margin: 0 0.5em;
+
+      a {
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: bold;
+        color: #000000;
+      }
+    }
+  }
+
+  /////////////////////////////SOCIAL ICONS
+
+  .social_media {
+    grid-area: social;
+    display: flex;
+    padding-right: 0;
+  }
+
+  .icons {
+    font-size: 1.8em;
+    margin: 1em;
+  }
+
+  /////////////////////////////HERO
+
+  .hero {
+    width: 100%;
+    grid-area: hero;
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.3em;
+      padding: 0.5em 0;
+    }
+  }
+
+  .button_cv {
+    padding: 10px;
+    margin: 0;
+    font-size: 1em;
+  }
+}

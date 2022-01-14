@@ -1,0 +1,59 @@
+///////////////////////////TECNOLOGIES
+
+.technologies {
+  grid-area: tec;
+  padding: 0 15em;
+  height: 100vh;
+
+  h1 {
+    font-size: 4em;
+    padding: 2em 0;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    padding: 1em 0;
+  }
+}
+
+.tec_icons {
+  @include flex-center;
+  font-size: 7em;
+  height: 3em;
+
+  i {
+    margin: 0.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .technologies {
+    grid-area: tec;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 30em;
+
+    h1 {
+      font-size: 2em;
+      padding: 1em 0;
+      width: 100vw;
+    }
+
+    h3 {
+      font-size: 1em;
+      padding: 0 2em;
+      width: 100vw;
+    }
+  }
+
+  .tec_icons {
+    @include flex-column-start;
+    font-size: 4em;
+    width: 100vw;
+
+    i {
+      margin: 0.5em;
+    }
+  }
+}

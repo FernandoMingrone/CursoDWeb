@@ -1,0 +1,112 @@
+///////////////////////////////////FOOTER
+
+.footer_conteiner {
+  @include contenedores($bgSecundario);
+  grid-area: footer;
+  height: 20em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-areas:
+    "tel email . ."
+    "text .    . socialIcons";
+  justify-items: center;
+  align-items: center;
+}
+.call {
+  grid-area: tel;
+  color: $grisMedio;
+
+  a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: $grisOscuro;
+    padding: 1em;
+  }
+}
+
+.email {
+  grid-area: email;
+  color: $grisMedio;
+
+  a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: $grisOscuro;
+    padding: 1em;
+  }
+}
+
+.footer_text {
+  grid-area: text;
+  color: $grisOscuro;
+}
+
+.footerSocial_media {
+  grid-area: socialIcons;
+
+  i {
+    background-color: $bgSecundario;
+    font-size: 3em;
+  }
+}
+
+.about {
+  font-size: 12em;
+}
+
+@media screen and (max-width: 480px) {
+  .footer_conteiner {
+    grid-area: footer;
+    background-color: $bgSecundario;
+    display: grid;
+    height: 22em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "tel tel"
+      "email email"
+      "socialIcons socialIcons";
+    justify-items: start;
+    align-items: center;
+    padding: 0 3em;
+
+    p {
+      display: none;
+    }
+  }
+
+  .call {
+    padding: 1em 0;
+    a {
+      text-decoration: none;
+      font-size: 1.1em;
+      color: $grisOscuro;
+      padding: 0;
+    }
+  }
+
+  .email {
+    padding: 1em 0;
+
+    a {
+      text-decoration: none;
+      font-size: 1.1em;
+      color: $grisOscuro;
+      padding: 0;
+    }
+  }
+
+  .footer_text {
+    grid-area: text;
+    color: $grisOscuro;
+  }
+
+  .footerSocial_media {
+    grid-area: socialIcons;
+
+    i {
+      background-color: $bgSecundario;
+      font-size: 3em;
+    }
+  }
+}
