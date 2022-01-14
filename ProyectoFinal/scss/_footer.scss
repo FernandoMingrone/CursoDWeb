@@ -68,7 +68,7 @@
       "socialIcons socialIcons";
     justify-items: start;
     align-items: center;
-    padding: 0 3em;
+    padding: 0 2em;
 
     p {
       display: none;
@@ -103,6 +103,7 @@
 
   .footerSocial_media {
     grid-area: socialIcons;
+    justify-self: center;
 
     i {
       background-color: $bgSecundario;

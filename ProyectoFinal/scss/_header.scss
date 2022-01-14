@@ -24,9 +24,25 @@
   color: #000000;
 }
 
+.btn-portfolio {
+  border: none;
+  background: linear-gradient(270deg, black 0%, white 100%);
+  width: 7em;
+  -webkit-box-shadow: -8px 6px 19px 1px rgba(0, 0, 0, 0.28);
+  box-shadow: -8px 6px 19px 1px rgba(0, 0, 0, 0.28);
+  border-radius: 10px;
+  height: 1.7em;
+
+  p {
+    margin-bottom: 0;
+    font-size: 1.1em;
+  }
+}
+
 ul {
   list-style: none;
   display: flex;
+  padding-left: 0;
 
   li {
     margin: 0 3em;
@@ -82,6 +98,10 @@ ul {
   background: linear-gradient(270deg, $btnColor1 0%, $btnColor2 100%);
 }
 
+////////////////////////////////////MOBILE
+
+////////////////////////////CONTENEDOR HEADER
+
 @media screen and (max-width: 480px) {
   .header_contenedor {
     grid-area: header;
@@ -93,12 +113,12 @@ ul {
     grid-template-areas:
       "nav  nav "
       "hero hero";
-    padding: 0;
+    padding: 0 2em;
   }
-  ///////////////////////////////NAVBAR
+  ///////////////////NAVBAR
 
   .portfolio {
-    padding: 0 0.2em;
+    padding: 0 1.2em;
     font-size: 1em;
     text-decoration: none;
     color: #000000;
@@ -115,6 +135,7 @@ ul {
 
     ul {
       grid-area: list;
+      justify-content: space-between;
     }
 
     li {
@@ -129,7 +150,7 @@ ul {
     }
   }
 
-  /////////////////////////////SOCIAL ICONS
+  ///////////SOCIAL ICONS
 
   .social_media {
     grid-area: social;
@@ -142,7 +163,7 @@ ul {
     margin: 1em;
   }
 
-  /////////////////////////////HERO
+  //////////////////////////////HERO
 
   .hero {
     width: 100%;

@@ -61,14 +61,17 @@
   justify-content: center;
 }
 
+///////////////////////////////////MOBILE
+
+//////////////PROJECTS
+
 @media screen and (max-width: 480px) {
   .projects {
     padding-left: 0;
-    padding: 0;
+    padding: 0 2em;
 
     h1 {
-      font-size: 2em;
-      padding: 0;
+      @include h1;
     }
   }
   .project_container {

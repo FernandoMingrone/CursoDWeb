@@ -29,28 +29,25 @@
 @media screen and (max-width: 480px) {
   .technologies {
     grid-area: tec;
-    padding: 0;
     display: flex;
     flex-direction: column;
     height: 30em;
+    padding: 0 2em;
 
     h1 {
-      font-size: 2em;
-      padding: 1em 0;
-      width: 100vw;
+      @include h1;
     }
 
     h3 {
       font-size: 1em;
-      padding: 0 2em;
-      width: 100vw;
+      padding: 0;
     }
   }
 
   .tec_icons {
     @include flex-column-start;
     font-size: 4em;
-    width: 100vw;
+    padding-top: 0.5em;
 
     i {
       margin: 0.5em;

@@ -23,8 +23,15 @@ $grisMedio: #5e5c5c;
   flex-direction: column;
 }
 
+@mixin h1 {
+  font-size: 2em;
+  padding-top: 2em;
+}
+
 @import "body";
 @import "header";
 @import "projects";
 @import "technologies";
 @import "footer";
+@import "about";
+
