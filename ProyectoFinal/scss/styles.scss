@@ -5,6 +5,8 @@ $btnColor2: #1334c7;
 $grisOscuro: #3a3a3a;
 $grisMedio: #5e5c5c;
 
+
+
 @mixin contenedores($bgContenedor) {
   display: grid;
   padding: 0 15em;
@@ -34,4 +36,6 @@ $grisMedio: #5e5c5c;
 @import "technologies";
 @import "footer";
 @import "about";
+@import "darkMode";
+
 

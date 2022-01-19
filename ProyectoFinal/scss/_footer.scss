@@ -11,6 +11,7 @@
     "text .    . socialIcons";
   justify-items: center;
   align-items: center;
+  transition: background-color 800ms ease;
 }
 .call {
   grid-area: tel;
