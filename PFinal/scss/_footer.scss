@@ -3,19 +3,27 @@
 .footer_conteiner {
   @include contenedores($bgSecundario);
   grid-area: footer;
-  height: 20em;
+  height: 22em;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 0.5fr 0.5fr;
   grid-template-areas:
     "tel email . ."
     "text .    . socialIcons";
-  justify-items: center;
+  justify-items: flex-start;
   align-items: center;
   transition: background-color 800ms ease;
 }
+
+.contact {
+  display: flex;
+  width: 35em;
+  margin-top: 3em;
+}
+
 .call {
   grid-area: tel;
-  color: $grisMedio;
+  color: $grisOscuro;
+  flex-direction: column;
 
   a {
     text-decoration: none;
@@ -27,7 +35,8 @@
 
 .email {
   grid-area: email;
-  color: $grisMedio;
+  color: $grisOscuro;
+  flex-direction: column;
 
   a {
     text-decoration: none;
