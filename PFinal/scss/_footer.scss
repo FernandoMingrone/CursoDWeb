@@ -12,10 +12,10 @@
   justify-items: flex-start;
   align-items: center;
   transition: background-color 800ms ease;
+  height: 25em;
 }
 
 .contact {
-  display: flex;
   width: 35em;
   margin-top: 3em;
 }
@@ -23,7 +23,8 @@
 .call {
   grid-area: tel;
   color: $grisOscuro;
-  flex-direction: column;
+  width: 18em;
+  margin-bottom: 2em;
 
   a {
     text-decoration: none;
@@ -36,7 +37,6 @@
 .email {
   grid-area: email;
   color: $grisOscuro;
-  flex-direction: column;
 
   a {
     text-decoration: none;
@@ -53,6 +53,7 @@
 
 .footerSocial_media {
   grid-area: socialIcons;
+  display: flex;
 
   i {
     background-color: $bgSecundario;
@@ -67,26 +68,24 @@
 @media screen and (max-width: 480px) {
   .footer_conteiner {
     grid-area: footer;
-    background-color: $bgSecundario;
+    background-color: #d2d2d2;
     display: grid;
-    height: 22em;
-    grid-template-columns: repeat(2, 1fr);
+    height: 24em;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-      "tel tel"
-      "email email"
-      "socialIcons socialIcons";
+      "tel"
+      "email"
+      "socialIcons";
     justify-items: start;
     align-items: center;
     padding: 0 2em;
-
-    p {
-      display: none;
-    }
   }
 
   .call {
-    padding: 1em 0;
+    // padding: 1em 0;
+    grid-area: tel;
+    width: 15em;
     a {
       text-decoration: none;
       font-size: 1.1em;
@@ -96,7 +95,8 @@
   }
 
   .email {
-    padding: 1em 0;
+    // padding: 1em 0;
+    grid-area: email;
 
     a {
       text-decoration: none;
@@ -106,9 +106,12 @@
     }
   }
 
+  .contact {
+    width: 84vw;
+  }
+
   .footer_text {
-    grid-area: text;
-    color: $grisOscuro;
+    display: none;
   }
 
   .footerSocial_media {

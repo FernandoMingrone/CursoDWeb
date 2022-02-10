@@ -8,12 +8,12 @@
 
   h1 {
     font-size: 4em;
-    padding: 2em 0;
+    padding: 2em 0 1.5em 0;
   }
 
   h3 {
     font-size: 1.5em;
-    padding: 1em 0;
+    padding: 1em 0 3.7em 0;
   }
 }
 
@@ -32,7 +32,7 @@
     grid-area: tec;
     display: flex;
     flex-direction: column;
-    height: 30em;
+    height: 67em;
     padding: 0 2em;
 
     h1 {
