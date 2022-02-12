@@ -7,13 +7,27 @@
     "footer   ";
 }
 
+.header_contenedor_about {
+  padding: 0 10em;
+  display: grid;
+  grid-area: header;
+  height: 101vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas:
+    "nav  nav  nav  nav"
+    "hero hero hero hero";
+  align-items: center;
+  transition: background-color 800ms ease;
+}
+
 .about_hero {
   height: 44em;
   width: 90em;
 }
 .about_text_h2 {
   font-size: 2em;
-  padding-top: 7em;
+  padding-top: 9em;
 }
 
 .about_text_p {
@@ -29,7 +43,7 @@
 
 .fotoPersonal {
   width: 20em;
-  padding: 3em 0 0;
+  padding: 4em 0 0;
   margin-right: 17em;
   left: 77em;
   float: right;
@@ -113,16 +127,16 @@
 @media screen and (max-width: 480px) {
   .div_contenedor_about {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100vw;
     grid-template-rows: 105vh 27em;
     grid-template-areas:
       "header   "
       "footer   ";
   }
 
-  .header_contenedor {
+  .header_contenedor_about {
     grid-area: header;
-    height: 100vh;
+    height: 105vh;
     width: 95vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -160,7 +174,7 @@
   .fotoPersonal {
     margin-right: 0;
     width: 12em;
-    padding: 15em 0 0;
+    padding: 8em 0 0;
     float: right;
     margin: 0;
   }
@@ -190,6 +204,7 @@
   }
   .footer_container_about {
     height: 27em;
+    width: 100vw;
   }
 
   // .footer_conteiner {

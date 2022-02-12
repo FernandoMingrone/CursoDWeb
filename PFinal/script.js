@@ -10,6 +10,7 @@ localStorage.setItem("darkMode", darkMode)
 
 $(() => {
     if(localStorage.getItem("darkMode") == "dark") {
+        $("#divContenedorAbout").addClass("darkMode")
         $("#header").addClass("darkMode")
         $("#projects").addClass("darkMode2")
         $("#technologies").addClass("darkMode")
@@ -30,6 +31,7 @@ $(() => {
     $("#btnLight").click(() => {
         $("#btnDark").show()
         $("#btnLight").hide() 
+        $("#divContenedorAbout").removeClass("darkMode")
         $("#header").removeClass("darkMode")
         $("#projects").removeClass("darkMode2")
         $("#technologies").removeClass("darkMode")
@@ -47,6 +49,7 @@ $(() => {
     $("#btnDark").click(() => {
         $("#btnDark").hide()
         $("#btnLight").show() 
+        $("#divContenedorAbout").addClass("darkMode")
         $("#header").addClass("darkMode")
         $("#projects").addClass("darkMode2")
         $("#technologies").addClass("darkMode")
